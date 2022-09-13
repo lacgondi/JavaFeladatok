@@ -38,7 +38,19 @@ public class Feladat14 {
             {
                 out.print("Adja meg a második szöveget: ");
                 String secondText = sc.nextLine();
-                out.printf("%s - Hossza: %d\n%s - Hossza: %d\n", text, text.length(), secondText, secondText.length());
+                int comapre = text.compareTo(secondText);
+                if(comapre < 0)
+                {
+                    out.println("Az első szöveg előrébb van az ABCben");
+                }
+                else if(comapre > 0)
+                {
+                    out.println("A második szöveg előrébb van az ABCben");
+                }
+                else
+                {
+                    out.println("A két szöveg megegyezik");
+                }
             }
             else if(choice.toLowerCase().equals("i"))
             {
